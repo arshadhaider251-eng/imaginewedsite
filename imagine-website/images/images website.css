@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('hero-bg.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  
+}
+
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #ff6f61;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  margin-top: 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff4b3e;
+}
+
+/* About */
+.about .container {
+  display: flex;
+  gap: 20px;
+  padding: 50px;
+}
+
+.about img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.portfolio {
+  padding: 50px;
+  background: #f9fafb;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  transition: transform 0.5s;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.contact {
+  padding: 50px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+.contact input, .contact textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1f2937;
+  color: white;
+}
