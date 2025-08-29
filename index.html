@@ -1,97 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic Meta -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO -->
-  <meta name="description" content="Imagine - Creative portfolio website showcasing design and development work by a creative web developer.">
-  <meta name="keywords" content="Portfolio, Web Development, Creative Design, Imagine Website">
-  <meta name="author" content="Your Name">
-
-  <!-- Open Graph / Social Media -->
-  <meta property="og:title" content="Imagine - Creative Portfolio" />
-  <meta property="og:description" content="A creative portfolio website built to inspire and showcase my work." />
-  <meta property="og:image" content="images/hero-bg.jpg" />
-  <meta property="og:type" content="website" />
-
   <title>Imagine - Creative Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="images/favicon.png" />
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container nav-content">
-      <h1 class="logo">Imagine</h1>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="hero-content fade-in">
-      <h1>Imagine Your Next Creation</h1>
-      <p id="typewriter"></p>
-      <a href="#portfolio" class="btn">Explore My Work</a>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="#" class="logo">Imagine</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="dark-toggle" id="darkModeToggle">🌙</button>
     </div>
   </header>
 
-  <!-- About Section -->
-  <section class="about" id="about">
-    <div class="container fade-in">
-      <img src="images/about.webp" alt="A portrait of the developer" />
-      <div>
-        <h2>About Me</h2>
-        <p>
-          I’m a creative developer passionate about building beautiful and
-          functional websites that inspire people and solve real problems.
-        </p>
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h2 data-aos="fade-down">Make Your Business More Profitable</h2>
+      <p data-aos="fade-up">We create stunning digital experiences that help your brand stand out in a crowded marketplace.</p>
+      <a href="#contact" class="btn" data-aos="fade-in" data-aos-delay="400">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2 data-aos="fade-up">Imagine Features</h2>
+      <div class="feature-items">
+        <div class="feature-box" data-aos="fade-right" data-aos-delay="100">
+          <i class="fas fa-sync-alt"></i>
+          <h3>Marketing Consulting</h3>
+          <p>Expert strategies to grow your brand and reach your target audience effectively.</p>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="feature-box" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-shopping-cart"></i>
+          <h3>Market Analysis</h3>
+          <p>In-depth research to help you understand your competition and market position.</p>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="feature-box" data-aos="fade-left" data-aos-delay="300">
+          <i class="fas fa-basketball-ball"></i>
+          <h3>Easy Purchase</h3>
+          <p>Streamlined processes to make acquiring our services simple and straightforward.</p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2 data-aos="fade-up">Our Services</h2>
+      <div class="service-items">
+        <div class="service-box" data-aos="zoom-in" data-aos-delay="100">
+          <i class="fas fa-laptop-code"></i>
+          <h3>Web Design</h3>
+          <p>Modern and responsive designs tailored for your business needs and goals.</p>
+        </div>
+        <div class="service-box" data-aos="zoom-in" data-aos-delay="200">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>UI/UX Design</h3>
+          <p>Intuitive user interfaces and seamless experiences that delight your users.</p>
+        </div>
+        <div class="service-box" data-aos="zoom-in" data-aos-delay="300">
+          <i class="fas fa-paint-brush"></i>
+          <h3>Graphic Design</h3>
+          <p>Beautiful visual designs that communicate your brand's message effectively.</p>
+        </div>
+        <div class="service-box" data-aos="zoom-in" data-aos-delay="400">
+          <i class="fas fa-film"></i>
+          <h3>Video Editing</h3>
+          <p>Professional video editing services to tell your story in a compelling way.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Portfolio Section -->
-  <section class="portfolio" id="portfolio">
-    <h2>My Work</h2>
-    <div class="portfolio-grid fade-in">
-      <div class="card">
-        <img src="images/Store.webp" alt="Preview of E-commerce Storefront project" />
-        <div class="overlay">E-commerce Storefront</div>
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2 data-aos="fade-up">Our Portfolio</h2>
+      <div class="portfolio-filter" data-aos="fade-up" data-aos-delay="100">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web Design</button>
+        <button class="filter-btn" data-filter="app">App Development</button>
+        <button class="filter-btn" data-filter="brand">Branding</button>
       </div>
-      <div class="card">
-        <img src="images/portfolio.jpg" alt="Preview of Personal Portfolio project" />
-        <div class="overlay">Personal Portfolio</div>
+      <div class="portfolio-grid">
+        <div class="portfolio-item" data-category="web">
+          <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Creative Website" class="portfolio-img">
+          <div class="portfolio-overlay">
+            <h3>Creative Website</h3>
+            <p>Web Design</p>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="app">
+          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mobile App UI" class="portfolio-img">
+          <div class="portfolio-overlay">
+            <h3>Mobile App UI</h3>
+            <p>App Development</p>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="brand">
+          <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Brand Identity" class="portfolio-img">
+          <div class="portfolio-overlay">
+            <h3>Brand Identity</h3>
+            <p>Branding</p>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="web">
+          <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="E-commerce Site" class="portfolio-img">
+          <div class="portfolio-overlay">
+            <h3>E-commerce Site</h3>
+            <p>Web Design</p>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="app">
+          <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fitness App" class="portfolio-img">
+          <div class="portfolio-overlay">
+            <h3>Fitness App</h3>
+            <p>App Development</p>
+          </div>
+        </div>
+       <div class="portfolio-item" data-category="brand">
+  <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Restaurant Branding" class="portfolio-img">
+  <div class="portfolio-overlay">
+    <h3>Restaurant Branding</h3>
+    <p>Branding</p>
+  </div>
+</div>
+
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2 data-aos="fade-up">Testimonials</h2>
+      <div class="testimonial-slider">
+        <div class="testimonial active">
+          <p>"The team at Imagine completely transformed our online presence. Our website traffic has increased by 150% since launch!"</p>
+          <span>- John Doe, CEO at Company</span>
+        </div>
+        <div class="testimonial">
+          <p>"They truly understood our vision and delivered beyond our expectations. The branding package was exactly what we needed."</p>
+          <span>- Jane Smith, Marketing Director</span>
+        </div>
+        <div class="testimonial">
+          <p>"Professional, creative, and delivered on time. We couldn't be happier with the results of our app design project."</p>
+          <span>- Michael Johnson, Founder</span>
+        </div>
       </div>
-      <div class="card">
-        <img src="images/bussines.jpg" alt="Preview of Business Landing Page project" />
-        <div class="overlay">Business Landing Page</div>
+      <div class="slider-controls">
+        <button id="prev"><i class="fas fa-chevron-left"></i></button>
+        <button id="next"><i class="fas fa-chevron-right"></i></button>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <h2>Contact Me</h2>
-    <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <input type="text" name="name" placeholder="Your Name" aria-label="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" aria-label="Your Email" required />
-      <textarea name="message" placeholder="Your Message" aria-label="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-    <p id="form-status" role="alert"></p>
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 data-aos="fade-up">Contact Us</h2>
+      <form class="contact-form" data-aos="fade-up" data-aos-delay="100">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Subject" class="full-width" required>
+        <textarea placeholder="Your Message" class="full-width" required></textarea>
+        <button type="submit" class="full-width">Send Message</button>
+      </form>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Imagine Portfolio | Designed by You</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <p>&copy; 2025 Imagine. All rights reserved.</p>
+    </div>
   </footer>
 
+  <!-- Back to Top Button -->
+  <button id="backToTop"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
